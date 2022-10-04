@@ -15,6 +15,8 @@ fun main(){
         biayaParkir = (lamaParkir * tarifDasar).toFloat()
     } else if ((lamaParkir > 5) && (lamaParkir < 24)) {
         biayaParkir = (5 + ((lamaParkir-5)*tarifBerikutnya)).toFloat()
+    } else if ((lamaParkir%24)==0) {
+        biayaParkir = (maxTarifPerhari * (lamaParkir / 24)).toFloat()
     } else {
         biayaParkir = maxTarifPerhari.toFloat()
     }
